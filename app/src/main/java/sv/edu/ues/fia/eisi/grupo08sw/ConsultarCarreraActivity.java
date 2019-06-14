@@ -33,7 +33,7 @@ public class ConsultarCarreraActivity extends AppCompatActivity {
     public void consultarServidor(View v){
         txtJson.setText("");
 
-        String url = "http://192.168.1.4/ws_carrera_query.php?" +
+        String url = "http://192.168.1.6/ws_carrera_query.php?" +
                 "nombreCarrera="+ editNombre.getText().toString().toUpperCase();
         String json = ControlWS.consultarCarrera(url, this );
 
