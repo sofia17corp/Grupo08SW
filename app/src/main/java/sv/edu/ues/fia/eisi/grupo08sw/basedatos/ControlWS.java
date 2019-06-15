@@ -2,6 +2,7 @@ package sv.edu.ues.fia.eisi.grupo08sw.basedatos;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -71,6 +72,17 @@ public class ControlWS {
         }else{
             return parseado5;
         }
+
+    }
+
+    public static String insertarPensum(String peticion, Context context){
+        String msj;
+        String json = obtenerRespuestaPeticion(peticion, context);
+        String[] resultado=json.split(";");
+        //si el jason esta bueno dara {resultado:1}
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return msj = "Pensum ingresado con exito";
+        }else{return msj="No se puede ingresar pensum";}
 
     }
 }

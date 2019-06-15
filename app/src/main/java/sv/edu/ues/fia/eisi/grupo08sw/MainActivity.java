@@ -12,8 +12,8 @@ import android.widget.ListView;
 @SuppressLint("NewApi")
 public class MainActivity extends ListActivity {
 
-    String[] menu ={"Insertar Carrera", "Consultar Carrera"};
-    String[] activities ={"InsertarCarreraActivity", "ConsultarCarreraActivity"};
+    String[] menu ={"Insertar Carrera", "Consultar Carrera", "Insertar Pensum"};
+    String[] activities ={"InsertarCarreraActivity", "ConsultarCarreraActivity", "InsertarPensumActivity"};
 
     @SuppressLint("NewApi")
     @Override
@@ -27,7 +27,7 @@ public class MainActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id){
         super.onListItemClick(l, v, position, id);
-        if(position!=2){
+        if(position!=4){
             String nombreValue=activities[position];
             try{
                 Class<?> clase=Class.forName("sv.edu.ues.fia.eisi.grupo08sw."+nombreValue);
