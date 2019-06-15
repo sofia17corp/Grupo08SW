@@ -12,8 +12,8 @@ import android.widget.ListView;
 @SuppressLint("NewApi")
 public class MainActivity extends ListActivity {
 
-    String[] menu ={"Insertar Carrera", "Consultar Carrera", "Consultar Pensum", "Eliminar Pensum"};
-    String[] activities ={"InsertarCarreraActivity", "ConsultarCarreraActivity", "ConsultarPensumActivity", "EliminarPensumActivity"};
+    String[] menu ={"Insertar Carrera", "Consultar Carrera", "Insertar Pensum"};
+    String[] activities ={"InsertarCarreraActivity", "ConsultarCarreraActivity", "InsertarPensumActivity"};
 
     @SuppressLint("NewApi")
     @Override
