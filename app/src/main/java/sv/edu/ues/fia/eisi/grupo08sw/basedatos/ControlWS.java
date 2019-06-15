@@ -75,6 +75,10 @@ public class ControlWS {
 
     }
 
+
+    // Area para PENSUM
+
+
     public static String insertarPensum(String peticion, Context context){
         String msj;
         String json = obtenerRespuestaPeticion(peticion, context);
@@ -84,5 +88,32 @@ public class ControlWS {
             return msj = "Pensum ingresado con exito";
         }else{return msj="No se puede ingresar pensum";}
 
+    }
+
+    public static String consultarPensum(String peticion, Context ctx){
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+
+        String parseado1= json.replace("{","");
+        String parseado2 = parseado1.replace("}","");
+        String parseado3 = parseado2.replace("[", "");
+        String parseado4 = parseado3.replace("]", "");
+        String parseado5 = parseado4.replace("\"", "");
+        String[] resultado= parseado5.split(",");
+        if (resultado[0].equals("No existe")){
+            return null;
+        }else{
+            return parseado5;
+        }
+    }
+
+    public static String eliminarPensum(String peticion, Context ctx){
+
+        String json=obtenerRespuestaPeticion(peticion, ctx);
+        String[]resultado=json.split(";");
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return "Se ha eliminado con exito";
+        }else {
+            return  "No se pudo elimnar";
+        }
     }
 }
