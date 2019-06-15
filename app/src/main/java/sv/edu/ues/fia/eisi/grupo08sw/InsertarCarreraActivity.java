@@ -31,7 +31,7 @@ public class InsertarCarreraActivity extends AppCompatActivity {
     public void ingresarServidor(View v){
         String url;
         String msj;
-        url= "http://192.168.1.6/ws_carrera_insert.php?" +
+        url= "http://eisi.fia.ues.edu.sv/ws_carrera_insert.php?" +
                 "idcarrera=" +editIdCarrera.getText().toString()+
                 "&nombreCarrera="+ editNombreCarrera.getText().toString();
         msj = ControlWS.insertarServidor(url, this);
