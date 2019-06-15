@@ -113,7 +113,7 @@ public class ControlWS {
         if (resultado[1].equals("{\"resultado\":1}")){
             return "Se ha eliminado con exito";
         }else {
-            return  "No se pudo elimnar";
+            return  "No se pudo eliminar";
         }
     }
 }
