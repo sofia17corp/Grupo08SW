@@ -31,7 +31,7 @@ public class ActualizarCarreraActivity extends AppCompatActivity {
     public void actualizarServidorCarrera(View v){
         String url;
         String msj;
-        url= "http://eisi.fia.ues.edu.sv/ws_carrera_update.php?" +
+        url= "http://eisi.fia.ues.edu.sv/GPO08/HC14030/ws_carrera_update.php?" +
                 "idcarrera=" +editIdCarreraA.getText().toString()+
                 "&nombreCarrera="+ editNombreCarreraA.getText().toString();
         msj = ControlWS.actualizarCarrera(url, this);
