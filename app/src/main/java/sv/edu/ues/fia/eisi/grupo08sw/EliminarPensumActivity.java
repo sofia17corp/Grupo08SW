@@ -27,7 +27,7 @@ public class EliminarPensumActivity extends AppCompatActivity {
     }
 
     public void eliminarPensumServidor(View v){
-        String url="http://192.168.0.10/ws_equipo_delete.php?"+"nombrePensum="+editNombre.getText().toString();
+        String url="http://eisi.fia.ues.edu.sv/ws_equipo_delete.php?"+"nombrePensum="+editNombre.getText().toString();
         String msj= ControlWS.eliminarPensum(url, this);
         Toast.makeText(this,msj,Toast.LENGTH_LONG).show();
 

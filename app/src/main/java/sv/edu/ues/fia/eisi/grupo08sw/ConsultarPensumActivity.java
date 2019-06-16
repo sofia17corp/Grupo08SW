@@ -31,7 +31,7 @@ public class ConsultarPensumActivity extends AppCompatActivity {
 
     public void consultarPensumServidor(View v) {
         txtJson.setText("");
-        String url = "http://192.168.0.10/ws_pensum_query.php?" +
+        String url = "http://eisi.fia.ues.edu.sv/ws_pensum_query.php?" +
                 "idPensum=" + editIdPensum.getText().toString();
         String json = ControlWS.consultarPensum(url, this);
 
