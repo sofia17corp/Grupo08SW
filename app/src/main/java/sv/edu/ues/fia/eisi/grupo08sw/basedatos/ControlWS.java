@@ -78,7 +78,7 @@ public class ControlWS {
 
     // Area para PENSUM
 
-
+//Insertar Pensum
     public static String insertarPensum(String peticion, Context context){
         String msj;
         String json = obtenerRespuestaPeticion(peticion, context);
@@ -89,6 +89,18 @@ public class ControlWS {
         }else{return msj="No se puede ingresar pensum";}
 
     }
+//Actualizar Pensum
+    public static String actualizarServidorPensum(String peticion, Context context){
+        String msj;
+        String json = obtenerRespuestaPeticion(peticion, context);
+        String[] resultado=json.split(";");
+        //si el jason esta bueno dara {resultado:1}
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return msj = "Pensum actualizado con exito";
+        }else{return msj="No se puede actualizar pensum";
+        }
+    }
+
 
     public static String consultarPensum(String peticion, Context ctx){
         String json = obtenerRespuestaPeticion(peticion, ctx);
