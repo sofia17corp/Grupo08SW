@@ -27,7 +27,7 @@ public class EliminarCarreraActivity extends AppCompatActivity {
     }
 
     public void eliminarCarreraServidor(View v){
-        String url="http://192.168.0.10/ws_equipo_delete.php?"+"nombreCarrera="+editNombreCarrera.getText().toString();
+        String url="http://eisi.fia.ues.edu.sv/GPO08/HC14030/ws_equipo_delete.php?"+"nombreCarrera="+editNombreCarrera.getText().toString();
         String msj= ControlWS.eliminarCarrera(url, this);
         Toast.makeText(this,msj,Toast.LENGTH_LONG).show();
 

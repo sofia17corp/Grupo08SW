@@ -31,7 +31,7 @@ public class ActualizarPensumActivity extends AppCompatActivity {
     public void actualizarPensum(View v){
         String url;
         String msj;
-        url= "http://eisi.fia.ues.edu.sv/ws_pensum_update.php?" +
+        url= "http://eisi.fia.ues.edu.sv/GPO08/HC14030/ws_pensum_update.php?" +
                 "idcarrera=" +editIdPensum.getText().toString()+
                 "&nombreCarrera="+ editNombrePensum.getText().toString();
         msj = ControlWS.actualizarServidorPensum(url, this);

@@ -24,7 +24,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="actualizarServidor"
+        android:onClick="actualizarServidorCarrera"
         android:text="Actualizar"/>
 
 </android.widget.LinearLayout>
