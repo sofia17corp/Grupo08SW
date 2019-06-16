@@ -75,10 +75,34 @@ public class ControlWS {
 
     }
 
+    public static String eliminarCarrera(String peticion, Context ctx){
+
+        String json=obtenerRespuestaPeticion(peticion, ctx);
+        String[]resultado=json.split(";");
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return "Se ha eliminado con exito";
+        }else {
+            return  "No se pudo eliminar";
+        }
+    }
+
+
+//Insertar Pensum
+
+    public static String actualizarCarrera(String peticion, Context context){
+        String msj;
+        String json = obtenerRespuestaPeticion(peticion, context);
+        String[] resultado=json.split(";");
+        //si el jason esta bueno dara {resultado:1}
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return msj = "Carrera actualizada con exito";
+        }else{return msj="No se puede actualizar carrera";
+        }
+    }
+
 
     // Area para PENSUM
 
-//Insertar Pensum
     public static String insertarPensum(String peticion, Context context){
         String msj;
         String json = obtenerRespuestaPeticion(peticion, context);
@@ -126,6 +150,17 @@ public class ControlWS {
             return "Se ha eliminado con exito";
         }else {
             return  "No se pudo eliminar";
+        }
+    }
+
+    public static String actualizarPensum(String peticion, Context context){
+        String msj;
+        String json = obtenerRespuestaPeticion(peticion, context);
+        String[] resultado=json.split(";");
+        //si el jason esta bueno dara {resultado:1}
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return msj = "Carrera actualizada con exito";
+        }else{return msj="No se puede actualizar carrera";
         }
     }
 }
