@@ -92,8 +92,8 @@ public class ControlWS {
         String[] resultado=json.split(";");
         //si el jason esta bueno dara {resultado:1}
         if (resultado[1].equals("{\"resultado\":1}")){
-            return msj = "Pensum ingresado con exito";
-        }else{return msj="No se puede ingresar pensum";
+            return msj = "Carrera actualizada con exito";
+        }else{return msj="No se puede actualizar carrera";
         }
     }
 
@@ -138,4 +138,14 @@ public class ControlWS {
         }
     }
 
+    public static String actualizarPensum(String peticion, Context context){
+        String msj;
+        String json = obtenerRespuestaPeticion(peticion, context);
+        String[] resultado=json.split(";");
+        //si el jason esta bueno dara {resultado:1}
+        if (resultado[1].equals("{\"resultado\":1}")){
+            return msj = "Carrera actualizada con exito";
+        }else{return msj="No se puede actualizar carrera";
+        }
+    }
 }

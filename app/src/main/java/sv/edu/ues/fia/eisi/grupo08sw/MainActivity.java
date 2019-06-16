@@ -15,6 +15,7 @@ public class MainActivity extends ListActivity {
     String[] menu ={"Insertar Carrera", "Consultar Carrera", "Eliminar Carrera", "Actualizar Carrera", "Insertar Pensum", "Consultar Pensum", "Eliminar Pensum"};
     String[] activities ={"InsertarCarreraActivity", "ConsultarCarreraActivity", "EliminarCarreraActivity", "ActualizarCarreraActivity", "InsertarPensumActivity", "ConsultarPensumActivity", "EliminarPensumActivity"};
 
+
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

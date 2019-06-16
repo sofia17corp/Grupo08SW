@@ -12,9 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< Updated upstream
         <activity android:name=".ActualizarCarreraActivity"></activity>
         <activity android:name=".EliminarCarreraActivity" />
         <activity android:name=".EliminarPensumActivity" />
+=======
+        <activity android:name=".EliminarPensumActivity"></activity>
+>>>>>>> Stashed changes
         <activity android:name=".ConsultarPensumActivity" />
         <activity android:name=".ConsultarCarreraActivity" />
         <activity android:name=".InsertarCarreraActivity" />
