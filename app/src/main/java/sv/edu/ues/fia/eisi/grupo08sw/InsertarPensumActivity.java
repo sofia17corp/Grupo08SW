@@ -33,7 +33,7 @@ public class InsertarPensumActivity extends AppCompatActivity {
 
     public void insertarPensum(View v){
         String url;
-        url= "http://eisi.fia.ues.edu.sv/ws_carrera_insert.php?" +
+        url= "http://eisi.fia.ues.edu.sv/ws_pensum_insert.php?" +
                 "idPesum=" +editIdPensum.getText().toString()+
                 "nombrePesum="+ editNombrePensum.getText().toString();
         String msj = ControlWS.insertarPensum(url, this);

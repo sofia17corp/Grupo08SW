@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActualizarPensumActivity"></activity>
+        <activity android:name=".InsertarPensumActivity" />
         <activity android:name=".EliminarPensumActivity" />
         <activity android:name=".ConsultarPensumActivity" />
         <activity android:name=".ConsultarCarreraActivity" />
