@@ -23,7 +23,7 @@ public class ActualizarPensumActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        editIdPensum = findViewById(R.id.idPensum);
+        editIdPensum= findViewById(R.id.idPensum);
         editNombrePensum = findViewById(R.id.nombrePensum);
 
     }
@@ -32,10 +32,9 @@ public class ActualizarPensumActivity extends AppCompatActivity {
         String url;
         String msj;
         url= "http://eisi.fia.ues.edu.sv/GPO08/HC14030/ws_pensum_update.php?" +
-                "idcarrera=" +editIdPensum.getText().toString()+
-                "&nombreCarrera="+ editNombrePensum.getText().toString();
-        msj = ControlWS.actualizarServidorPensum(url, this);
-        Toast.makeText(this, msj, Toast.LENGTH_LONG).show();
-        editNombrePensum.setText(url);
+                "idpesum=" +editIdPensum.getText().toString()+
+                "&nombrePesum="+ editNombrePensum.getText().toString();
+        msj = ControlWS.actualizarServidor(url, this);
+
     }
 }

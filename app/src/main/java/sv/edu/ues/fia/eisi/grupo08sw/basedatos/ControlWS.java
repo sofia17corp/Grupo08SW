@@ -87,7 +87,7 @@ public class ControlWS {
     }
 
 
-//Insertar Pensum
+//Insertar Carrera
 
     public static String actualizarCarrera(String peticion, Context context){
         String msj;
@@ -103,7 +103,7 @@ public class ControlWS {
 
     // Area para PENSUM
 
-    public static String insertarPensum(String peticion, Context context){
+    public static String insertarPensumServidor(String peticion, Context context){
         String msj;
         String json = obtenerRespuestaPeticion(peticion, context);
         String[] resultado=json.split(";");
@@ -114,16 +114,16 @@ public class ControlWS {
 
     }
 //Actualizar Pensum
-    public static String actualizarServidorPensum(String peticion, Context context){
-        String msj;
-        String json = obtenerRespuestaPeticion(peticion, context);
+    public static String actualizarServidor(String peticion, Context context){
+    String msj;
+    String json = obtenerRespuestaPeticion(peticion, context);
         String[] resultado=json.split(";");
-        //si el jason esta bueno dara {resultado:1}
-        if (resultado[1].equals("{\"resultado\":1}")){
-            return msj = "Pensum actualizado con exito";
-        }else{return msj="No se puede actualizar pensum";
-        }
+    //si el jason esta bueno dara {resultado:1}
+    if (resultado[1].equals("{\"resultado\":1}")){
+        return msj = "Pensum actualizado con exito";
+    }else{return msj="No se puede actualizar pensum";
     }
+}
 
 
     public static String consultarPensum(String peticion, Context ctx){
@@ -153,14 +153,6 @@ public class ControlWS {
         }
     }
 
-    public static String actualizarPensum(String peticion, Context context){
-        String msj;
-        String json = obtenerRespuestaPeticion(peticion, context);
-        String[] resultado=json.split(";");
-        //si el jason esta bueno dara {resultado:1}
-        if (resultado[1].equals("{\"resultado\":1}")){
-            return msj = "Carrera actualizada con exito";
-        }else{return msj="No se puede actualizar carrera";
-        }
+
     }
-}
+

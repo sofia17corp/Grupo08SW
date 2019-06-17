@@ -1,8 +1,5 @@
 package sv.edu.ues.fia.eisi.grupo08sw;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.annotation.SuppressLint;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -33,10 +30,12 @@ public class InsertarPensumActivity extends AppCompatActivity {
 
     public void insertarPensum(View v){
         String url;
+        String msj;
         url= "http://eisi.fia.ues.edu.sv/GPO08/HC14030/ws_pensum_insert.php?" +
-                "idPesum=" +editIdPensum.getText().toString()+
-                "nombrePesum="+ editNombrePensum.getText().toString();
-        String msj = ControlWS.insertarPensum(url, this);
+                "idpesum=" +editIdPensum.getText().toString()+
+                "&nombrePesum="+ editNombrePensum.getText().toString();
+        msj = ControlWS.insertarPensumServidor(url, this);
         Toast.makeText(this, msj, Toast.LENGTH_LONG).show();
+
     }
 }
