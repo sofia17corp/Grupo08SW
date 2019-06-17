@@ -38,13 +38,13 @@ public class ConsultarPensumActivity extends AppCompatActivity {
         if (json == null) {
             txtJson.setText("No existe");
         } else {
-           String[]datosJson = json.split(",");
-           String[] id, nombre;
-           id=datosJson[0].split(":");
-           nombre=datosJson[1].split(":");
+            String[]datosJson = json.split(",");
+            String[] id, nombre;
+            id=datosJson[0].split(":");
+            nombre=datosJson[1].split(":");
 
-           txtJson.setText(txtJson.getText().toString()+"id= "+id[1]+"\n");
-           txtJson.setText(txtJson.getText().toString()+"nombre= "+nombre[1]+"\n");
+            txtJson.setText(txtJson.getText().toString()+"id= "+id[1]+"\n");
+            txtJson.setText(txtJson.getText().toString()+"nombre= "+nombre[1]+"\n");
 
         }
     }
